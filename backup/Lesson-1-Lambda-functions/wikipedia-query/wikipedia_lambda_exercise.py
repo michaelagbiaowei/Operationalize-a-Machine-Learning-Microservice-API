@@ -25,7 +25,9 @@ def lambda_handler(event, context):
     
     ## TO DO: Format the response as JSON and return the result
     response = {
-        ## your code here
+        "statusCode": statusCode, 
+        "headers": { "Content-type": "application/json" },
+        "body": json.dumps({"message": res})
     }
     
     return response
