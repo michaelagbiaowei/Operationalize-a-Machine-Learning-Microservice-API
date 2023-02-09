@@ -22,15 +22,15 @@ sudo chmod +x /bin/hadolint
 make lint
 
 # Installing minikube
-curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
 minikube version
 
-minikube start
+sudo minikube start
 
-minikube kubectl -- get pods -A
+sudo minikube kubectl -- get pods -A
 
 # Executing run_docker.sh script
 sudo chmod u+x run_docker.sh
