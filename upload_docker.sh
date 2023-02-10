@@ -5,11 +5,14 @@
 
 # Step 1:
 # Create dockerpath
-# dockerpath=<your docker ID/path>
+dockerpath=maiempire/sklearn
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
+docker login -u maiempire
+docker tag maiempire/sklearn $dockerpath:latest
 
 # Step 3:
 # Push image to a docker repository
+docker push maiempire/sklearn:latest
