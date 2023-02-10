@@ -7,13 +7,16 @@ WORKDIR /app
 
 ## Step 2:
 # Copy source code to working directory
-COPY . app.py /app/
+COPY app.py requirements.txt /app/
+COPY model_data /app/model_data/
 
 ## Step 3:
 # Install packages from requirements.txt
 # hadolint ignore=DL3013
-RUN pip install ip install --no-cache-dir --upgrade pip &&\
-    pip install ip install --no-cache-dir --trusted-host pypi.python.org -r requirements.txt
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir --upgrade wheel && \
+    pip install --no-cache-dir --upgrade setuptools && \
+    pip install --no-cache-dir --trusted-host pypi.python.org -r requirements.txtt
 
 ## Step 4:
 # Expose port 80
