@@ -8,13 +8,17 @@ dockerpath=maiempire/sklearn
 
 # Step 2
 # Run the Docker Hub container with kubernetes
-kubectl run sklearn-model-api --image=${dockerpath}:latest
+kubectl run maiempire/sklearn \
+	--image=$dockerpath\
+	--port=80 --labels app=maiempire/sklearn
 
 # Step 3:
 # List kubernetes pods
-minikube kubectl -- get pods -A
+kubectl get pods
+
 
 # Step 4:
 # Forward the container port to a host
-# kubectl port-forward sklearn-model-api 8000:80
-kubectl port-forward pod/sklearn-model-api --address 0.0.0.0 8000:80
+kubectl port-forward maiempire/sklearn 8000:80
+
+
