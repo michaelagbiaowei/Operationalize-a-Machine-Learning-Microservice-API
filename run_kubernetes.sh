@@ -16,4 +16,5 @@ minikube kubectl -- get pods -A
 
 # Step 4:
 # Forward the container port to a host
-kubectl port-forward sklearn-model-api 8000:80
+# kubectl port-forward sklearn-model-api 8000:80
+kubectl port-forward pod/sklearn-model-api --address 0.0.0.0 8000:80
