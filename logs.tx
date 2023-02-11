@@ -1,0 +1,244 @@
+* 
+* ==> Audit <==
+* |---------|------------------------|----------|----------|---------|---------------------|----------|
+| Command |          Args          | Profile  |   User   | Version |     Start Time      | End Time |
+|---------|------------------------|----------|----------|---------|---------------------|----------|
+| start   |                        | minikube | ec2-user | v1.29.0 | 11 Feb 23 14:38 UTC |          |
+| ssh     | -- docker system prune | minikube | ec2-user | v1.29.0 | 11 Feb 23 14:40 UTC |          |
+|---------|------------------------|----------|----------|---------|---------------------|----------|
+
+* 
+* ==> Last Start <==
+* Log file created at: 2023/02/11 14:38:04
+Running on machine: ip-172-31-40-68
+Binary: Built with gc go1.19.5 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0211 14:38:04.331582   28978 out.go:296] Setting OutFile to fd 1 ...
+I0211 14:38:04.331709   28978 out.go:343] TERM=screen,COLORTERM=, which probably does not support color
+I0211 14:38:04.331713   28978 out.go:309] Setting ErrFile to fd 2...
+I0211 14:38:04.331720   28978 out.go:343] TERM=screen,COLORTERM=, which probably does not support color
+I0211 14:38:04.331837   28978 root.go:334] Updating PATH: /home/ec2-user/.minikube/bin
+W0211 14:38:04.332012   28978 root.go:311] Error reading config file at /home/ec2-user/.minikube/config/config.json: open /home/ec2-user/.minikube/config/config.json: no such file or directory
+I0211 14:38:04.332343   28978 out.go:303] Setting JSON to false
+I0211 14:38:04.333482   28978 start.go:125] hostinfo: {"hostname":"ip-172-31-40-68.ec2.internal","uptime":699,"bootTime":1676125586,"procs":128,"os":"linux","platform":"amazon","platformFamily":"rhel","platformVersion":"2","kernelVersion":"4.14.301-224.520.amzn2.x86_64","kernelArch":"x86_64","virtualizationSystem":"","virtualizationRole":"","hostId":"ec2b047c-5ce5-b881-504a-7ca4c1dcf532"}
+I0211 14:38:04.333541   28978 start.go:135] virtualization:  
+I0211 14:38:04.336403   28978 out.go:177] * minikube v1.29.0 on Amazon 2
+W0211 14:38:04.337929   28978 preload.go:295] Failed to list preload files: open /home/ec2-user/.minikube/cache/preloaded-tarball: no such file or directory
+I0211 14:38:04.338017   28978 notify.go:220] Checking for updates...
+I0211 14:38:04.338039   28978 driver.go:365] Setting default libvirt URI to qemu:///system
+I0211 14:38:04.338057   28978 global.go:111] Querying for installed drivers using PATH=/home/ec2-user/.minikube/bin:/home/ec2-user/.devops/bin:/home/ec2-user/.rvm/gems/ruby-2.6.3/bin:/home/ec2-user/.rvm/gems/ruby-2.6.3@global/bin:/home/ec2-user/.rvm/rubies/ruby-2.6.3/bin:/home/ec2-user/.nvm/versions/node/v16.19.0/bin:/home/ec2-user/.rvm/gems/ruby-2.6.3/bin:/home/ec2-user/.rvm/gems/ruby-2.6.3@global/bin:/home/ec2-user/.rvm/rubies/ruby-2.6.3/bin:/home/ec2-user/.rvm/gems/ruby-2.6.3/bin:/home/ec2-user/.rvm/gems/ruby-2.6.3@global/bin:/home/ec2-user/.rvm/rubies/ruby-2.6.3/bin:/usr/local/bin:/usr/bin:/home/ec2-user/.local/bin:/home/ec2-user/bin:/usr/local/bin:/home/ec2-user/.rvm/bin:/usr/local/sbin:/usr/sbin:/home/ec2-user/.local/bin:/home/ec2-user/bin:/usr/local/bin:/home/ec2-user/.rvm/bin:/home/ec2-user/.local/bin:/home/ec2-user/bin:/home/ec2-user/.local/bin:/home/ec2-user/bin:/usr/local/bin:/home/ec2-user/.rvm/bin:/home/ec2-user/.local/bin:/home/ec2-user/bin
+I0211 14:38:04.363800   28978 global.go:122] none default: false priority: 4, state: {Installed:true Healthy:true Running:false NeedsImprovement:false Error:<nil> Reason: Fix: Doc: Version:}
+I0211 14:38:04.363954   28978 global.go:122] podman default: true priority: 7, state: {Installed:false Healthy:false Running:false NeedsImprovement:false Error:exec: "podman": executable file not found in $PATH Reason: Fix:Install Podman Doc:https://minikube.sigs.k8s.io/docs/drivers/podman/ Version:}
+I0211 14:38:04.364035   28978 global.go:122] qemu2 default: true priority: 7, state: {Installed:false Healthy:false Running:false NeedsImprovement:false Error:exec: "qemu-system-x86_64": executable file not found in $PATH Reason: Fix:Install qemu-system Doc:https://minikube.sigs.k8s.io/docs/reference/drivers/qemu/ Version:}
+I0211 14:38:04.364044   28978 global.go:122] ssh default: false priority: 4, state: {Installed:true Healthy:true Running:false NeedsImprovement:false Error:<nil> Reason: Fix: Doc: Version:}
+I0211 14:38:04.364150   28978 global.go:122] virtualbox default: true priority: 6, state: {Installed:false Healthy:false Running:false NeedsImprovement:false Error:unable to find VBoxManage in $PATH Reason: Fix:Install VirtualBox Doc:https://minikube.sigs.k8s.io/docs/reference/drivers/virtualbox/ Version:}
+I0211 14:38:04.364222   28978 global.go:122] vmware default: true priority: 7, state: {Installed:false Healthy:false Running:false NeedsImprovement:false Error:exec: "docker-machine-driver-vmware": executable file not found in $PATH Reason: Fix:Install docker-machine-driver-vmware Doc:https://minikube.sigs.k8s.io/docs/reference/drivers/vmware/ Version:}
+I0211 14:38:04.401506   28978 docker.go:141] docker version: linux-20.10.17:
+I0211 14:38:04.401608   28978 cli_runner.go:164] Run: docker system info --format "{{json .}}"
+I0211 14:38:04.444221   28978 info.go:266] docker info: {ID:GEI3:MKD5:SIBU:WKR7:BIHY:IFW5:5EZ4:5RCF:FLB4:4HUL:Z6GK:FWYY Containers:1 ContainersRunning:0 ContainersPaused:0 ContainersStopped:1 Images:1 Driver:overlay2 DriverStatus:[[Backing Filesystem xfs] [Supports d_type true] [Native Overlay Diff true] [userxattr false]] SystemStatus:<nil> Plugins:{Volume:[local] Network:[bridge host ipvlan macvlan null overlay] Authorization:<nil> Log:[awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog]} MemoryLimit:true SwapLimit:true KernelMemory:true KernelMemoryTCP:true CPUCfsPeriod:true CPUCfsQuota:true CPUShares:true CPUSet:true PidsLimit:true IPv4Forwarding:true BridgeNfIptables:true BridgeNfIP6Tables:true Debug:false NFd:24 OomKillDisable:true NGoroutines:34 SystemTime:2023-02-11 14:38:04.431682684 +0000 UTC LoggingDriver:json-file CgroupDriver:cgroupfs NEventsListener:0 KernelVersion:4.14.301-224.520.amzn2.x86_64 OperatingSystem:Amazon Linux 2 OSType:linux Architecture:x86_64 IndexServerAddress:https://index.docker.io/v1/ RegistryConfig:{AllowNondistributableArtifactsCIDRs:[] AllowNondistributableArtifactsHostnames:[] InsecureRegistryCIDRs:[127.0.0.0/8] IndexConfigs:{DockerIo:{Name:docker.io Mirrors:[] Secure:true Official:true}} Mirrors:[]} NCPU:4 MemTotal:16623497216 GenericResources:<nil> DockerRootDir:/var/lib/docker HTTPProxy: HTTPSProxy: NoProxy: Name:ip-172-31-40-68.ec2.internal Labels:[] ExperimentalBuild:false ServerVersion:20.10.17 ClusterStore: ClusterAdvertise: Runtimes:{Runc:{Path:runc}} DefaultRuntime:runc Swarm:{NodeID: NodeAddr: LocalNodeState:inactive ControlAvailable:false Error: RemoteManagers:<nil>} LiveRestoreEnabled:false Isolation: InitBinary:docker-init ContainerdCommit:{ID:9cd3357b7fd7218e4aec3eae239db1f68a5a6ec6 Expected:9cd3357b7fd7218e4aec3eae239db1f68a5a6ec6} RuncCommit:{ID:5fd4c4d144137e991c4acebb2146ab1483a97925 Expected:5fd4c4d144137e991c4acebb2146ab1483a97925} InitCommit:{ID:de40ad0 Expected:de40ad0} SecurityOptions:[name=seccomp,profile=default] ProductLicense: Warnings:<nil> ServerErrors:[] ClientInfo:{Debug:false Plugins:[] Warnings:<nil>}}
+I0211 14:38:04.445189   28978 docker.go:282] overlay module found
+I0211 14:38:04.445207   28978 global.go:122] docker default: true priority: 9, state: {Installed:true Healthy:true Running:false NeedsImprovement:false Error:<nil> Reason: Fix: Doc: Version:}
+I0211 14:38:04.445344   28978 global.go:122] kvm2 default: true priority: 8, state: {Installed:false Healthy:false Running:false NeedsImprovement:false Error:exec: "virsh": executable file not found in $PATH Reason: Fix:Install libvirt Doc:https://minikube.sigs.k8s.io/docs/reference/drivers/kvm2/ Version:}
+I0211 14:38:04.445361   28978 driver.go:300] not recommending "none" due to default: false
+I0211 14:38:04.445365   28978 driver.go:300] not recommending "ssh" due to default: false
+I0211 14:38:04.445376   28978 driver.go:335] Picked: docker
+I0211 14:38:04.445381   28978 driver.go:336] Alternatives: [none ssh]
+I0211 14:38:04.445384   28978 driver.go:337] Rejects: [podman qemu2 virtualbox vmware kvm2]
+I0211 14:38:04.447291   28978 out.go:177] * Automatically selected the docker driver. Other choices: none, ssh
+I0211 14:38:04.448632   28978 start.go:296] selected driver: docker
+I0211 14:38:04.448646   28978 start.go:857] validating driver "docker" against <nil>
+I0211 14:38:04.448667   28978 start.go:868] status for docker: {Installed:true Healthy:true Running:false NeedsImprovement:false Error:<nil> Reason: Fix: Doc: Version:}
+I0211 14:38:04.448776   28978 cli_runner.go:164] Run: docker system info --format "{{json .}}"
+I0211 14:38:04.491046   28978 info.go:266] docker info: {ID:GEI3:MKD5:SIBU:WKR7:BIHY:IFW5:5EZ4:5RCF:FLB4:4HUL:Z6GK:FWYY Containers:1 ContainersRunning:0 ContainersPaused:0 ContainersStopped:1 Images:1 Driver:overlay2 DriverStatus:[[Backing Filesystem xfs] [Supports d_type true] [Native Overlay Diff true] [userxattr false]] SystemStatus:<nil> Plugins:{Volume:[local] Network:[bridge host ipvlan macvlan null overlay] Authorization:<nil> Log:[awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog]} MemoryLimit:true SwapLimit:true KernelMemory:true KernelMemoryTCP:true CPUCfsPeriod:true CPUCfsQuota:true CPUShares:true CPUSet:true PidsLimit:true IPv4Forwarding:true BridgeNfIptables:true BridgeNfIP6Tables:true Debug:false NFd:24 OomKillDisable:true NGoroutines:34 SystemTime:2023-02-11 14:38:04.478489156 +0000 UTC LoggingDriver:json-file CgroupDriver:cgroupfs NEventsListener:0 KernelVersion:4.14.301-224.520.amzn2.x86_64 OperatingSystem:Amazon Linux 2 OSType:linux Architecture:x86_64 IndexServerAddress:https://index.docker.io/v1/ RegistryConfig:{AllowNondistributableArtifactsCIDRs:[] AllowNondistributableArtifactsHostnames:[] InsecureRegistryCIDRs:[127.0.0.0/8] IndexConfigs:{DockerIo:{Name:docker.io Mirrors:[] Secure:true Official:true}} Mirrors:[]} NCPU:4 MemTotal:16623497216 GenericResources:<nil> DockerRootDir:/var/lib/docker HTTPProxy: HTTPSProxy: NoProxy: Name:ip-172-31-40-68.ec2.internal Labels:[] ExperimentalBuild:false ServerVersion:20.10.17 ClusterStore: ClusterAdvertise: Runtimes:{Runc:{Path:runc}} DefaultRuntime:runc Swarm:{NodeID: NodeAddr: LocalNodeState:inactive ControlAvailable:false Error: RemoteManagers:<nil>} LiveRestoreEnabled:false Isolation: InitBinary:docker-init ContainerdCommit:{ID:9cd3357b7fd7218e4aec3eae239db1f68a5a6ec6 Expected:9cd3357b7fd7218e4aec3eae239db1f68a5a6ec6} RuncCommit:{ID:5fd4c4d144137e991c4acebb2146ab1483a97925 Expected:5fd4c4d144137e991c4acebb2146ab1483a97925} InitCommit:{ID:de40ad0 Expected:de40ad0} SecurityOptions:[name=seccomp,profile=default] ProductLicense: Warnings:<nil> ServerErrors:[] ClientInfo:{Debug:false Plugins:[] Warnings:<nil>}}
+I0211 14:38:04.491139   28978 start_flags.go:305] no existing cluster config was found, will generate one from the flags 
+I0211 14:38:04.491495   28978 start_flags.go:386] Using suggested 3900MB memory alloc based on sys=15853MB, container=15853MB
+I0211 14:38:04.491639   28978 start_flags.go:899] Wait components to verify : map[apiserver:true system_pods:true]
+I0211 14:38:04.493642   28978 out.go:177] * Using Docker driver with root privileges
+I0211 14:38:04.495079   28978 cni.go:84] Creating CNI manager for ""
+I0211 14:38:04.495094   28978 cni.go:157] "docker" driver + "docker" container runtime found on kubernetes v1.24+, recommending bridge
+I0211 14:38:04.495101   28978 start_flags.go:314] Found "bridge CNI" CNI - setting NetworkPlugin=cni
+I0211 14:38:04.495109   28978 start_flags.go:319] config:
+{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.37@sha256:8bf7a0e8a062bc5e2b71d28b35bfa9cc862d9220e234e86176b3785f685d8b15 Memory:3900 CPUs:2 DiskSize:20000 VMDriver: Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.26.1 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/home/ec2-user:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP:}
+I0211 14:38:04.496743   28978 out.go:177] * Starting control plane node minikube in cluster minikube
+I0211 14:38:04.498208   28978 cache.go:120] Beginning downloading kic base image for docker with docker
+I0211 14:38:04.500164   28978 out.go:177] * Pulling base image ...
+I0211 14:38:04.501300   28978 preload.go:132] Checking if preload exists for k8s version v1.26.1 and runtime docker
+I0211 14:38:04.501379   28978 image.go:77] Checking for gcr.io/k8s-minikube/kicbase:v0.0.37@sha256:8bf7a0e8a062bc5e2b71d28b35bfa9cc862d9220e234e86176b3785f685d8b15 in local docker daemon
+I0211 14:38:04.526910   28978 preload.go:119] Found remote preload: https://storage.googleapis.com/minikube-preloaded-volume-tarballs/v18/v1.26.1/preloaded-images-k8s-v18-v1.26.1-docker-overlay2-amd64.tar.lz4
+I0211 14:38:04.526928   28978 cache.go:57] Caching tarball of preloaded images
+I0211 14:38:04.527729   28978 preload.go:132] Checking if preload exists for k8s version v1.26.1 and runtime docker
+I0211 14:38:04.529770   28978 out.go:177] * Downloading Kubernetes v1.26.1 preload ...
+I0211 14:38:04.530812   28978 preload.go:238] getting checksum for preloaded-images-k8s-v18-v1.26.1-docker-overlay2-amd64.tar.lz4 ...
+I0211 14:38:04.538107   28978 cache.go:148] Downloading gcr.io/k8s-minikube/kicbase:v0.0.37@sha256:8bf7a0e8a062bc5e2b71d28b35bfa9cc862d9220e234e86176b3785f685d8b15 to local cache
+I0211 14:38:04.538227   28978 image.go:61] Checking for gcr.io/k8s-minikube/kicbase:v0.0.37@sha256:8bf7a0e8a062bc5e2b71d28b35bfa9cc862d9220e234e86176b3785f685d8b15 in local cache directory
+I0211 14:38:04.538285   28978 image.go:119] Writing gcr.io/k8s-minikube/kicbase:v0.0.37@sha256:8bf7a0e8a062bc5e2b71d28b35bfa9cc862d9220e234e86176b3785f685d8b15 to local cache
+I0211 14:38:04.574231   28978 download.go:101] Downloading: https://storage.googleapis.com/minikube-preloaded-volume-tarballs/v18/v1.26.1/preloaded-images-k8s-v18-v1.26.1-docker-overlay2-amd64.tar.lz4?checksum=md5:c6cc8ea1da4e19500d6fe35540785ea8 -> /home/ec2-user/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.26.1-docker-overlay2-amd64.tar.lz4
+I0211 14:38:08.367093   28978 preload.go:249] saving checksum for preloaded-images-k8s-v18-v1.26.1-docker-overlay2-amd64.tar.lz4 ...
+I0211 14:38:08.367172   28978 preload.go:256] verifying checksum of /home/ec2-user/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.26.1-docker-overlay2-amd64.tar.lz4 ...
+I0211 14:38:09.202966   28978 cache.go:60] Finished verifying existence of preloaded tar for  v1.26.1 on docker
+I0211 14:38:09.203260   28978 profile.go:148] Saving config to /home/ec2-user/.minikube/profiles/minikube/config.json ...
+I0211 14:38:09.203278   28978 lock.go:35] WriteFile acquiring /home/ec2-user/.minikube/profiles/minikube/config.json: {Name:mk5f377c42c55cd70f48bdaa1ac96608178ba470 Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0211 14:38:09.385154   28978 cache.go:151] successfully saved gcr.io/k8s-minikube/kicbase:v0.0.37@sha256:8bf7a0e8a062bc5e2b71d28b35bfa9cc862d9220e234e86176b3785f685d8b15 as a tarball
+I0211 14:38:09.385162   28978 cache.go:161] Loading gcr.io/k8s-minikube/kicbase:v0.0.37@sha256:8bf7a0e8a062bc5e2b71d28b35bfa9cc862d9220e234e86176b3785f685d8b15 from local cache
+I0211 14:38:26.323067   28978 cache.go:163] successfully loaded and using gcr.io/k8s-minikube/kicbase:v0.0.37@sha256:8bf7a0e8a062bc5e2b71d28b35bfa9cc862d9220e234e86176b3785f685d8b15 from cached tarball
+I0211 14:38:26.323096   28978 cache.go:193] Successfully downloaded all kic artifacts
+I0211 14:38:26.323136   28978 start.go:364] acquiring machines lock for minikube: {Name:mke39e9c84c97a4cc79f46eddd6372cb206cf268 Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I0211 14:38:26.323232   28978 start.go:368] acquired machines lock for "minikube" in 81.49µs
+I0211 14:38:26.323249   28978 start.go:93] Provisioning new machine with config: &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.37@sha256:8bf7a0e8a062bc5e2b71d28b35bfa9cc862d9220e234e86176b3785f685d8b15 Memory:3900 CPUs:2 DiskSize:20000 VMDriver: Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.26.1 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP: Port:8443 KubernetesVersion:v1.26.1 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/home/ec2-user:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP:} &{Name: IP: Port:8443 KubernetesVersion:v1.26.1 ContainerRuntime:docker ControlPlane:true Worker:true}
+I0211 14:38:26.323339   28978 start.go:125] createHost starting for "" (driver="docker")
+I0211 14:38:26.325163   28978 out.go:204] * Creating docker container (CPUs=2, Memory=3900MB) ...
+I0211 14:38:26.325995   28978 start.go:159] libmachine.API.Create for "minikube" (driver="docker")
+I0211 14:38:26.326044   28978 client.go:168] LocalClient.Create starting
+I0211 14:38:26.326140   28978 main.go:141] libmachine: Creating CA: /home/ec2-user/.minikube/certs/ca.pem
+I0211 14:38:26.418151   28978 main.go:141] libmachine: Creating client certificate: /home/ec2-user/.minikube/certs/cert.pem
+I0211 14:38:26.496654   28978 cli_runner.go:164] Run: docker network inspect minikube --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}"
+W0211 14:38:26.527266   28978 cli_runner.go:211] docker network inspect minikube --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}" returned with exit code 1
+I0211 14:38:26.527357   28978 network_create.go:281] running [docker network inspect minikube] to gather additional debugging logs...
+I0211 14:38:26.527369   28978 cli_runner.go:164] Run: docker network inspect minikube
+W0211 14:38:26.557563   28978 cli_runner.go:211] docker network inspect minikube returned with exit code 1
+I0211 14:38:26.557616   28978 network_create.go:284] error running [docker network inspect minikube]: docker network inspect minikube: exit status 1
+stdout:
+[]
+
+stderr:
+Error: No such network: minikube
+I0211 14:38:26.557627   28978 network_create.go:286] output of [docker network inspect minikube]: -- stdout --
+[]
+
+-- /stdout --
+** stderr ** 
+Error: No such network: minikube
+
+** /stderr **
+I0211 14:38:26.557702   28978 cli_runner.go:164] Run: docker network inspect bridge --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}"
+I0211 14:38:26.595271   28978 network.go:206] using free private subnet 192.168.49.0/24: &{IP:192.168.49.0 Netmask:255.255.255.0 Prefix:24 CIDR:192.168.49.0/24 Gateway:192.168.49.1 ClientMin:192.168.49.2 ClientMax:192.168.49.254 Broadcast:192.168.49.255 IsPrivate:true Interface:{IfaceName: IfaceIPv4: IfaceMTU:0 IfaceMAC:} reservation:0xc01b1fe060}
+I0211 14:38:26.595322   28978 network_create.go:123] attempt to create docker network minikube 192.168.49.0/24 with gateway 192.168.49.1 and MTU of 1500 ...
+I0211 14:38:26.595405   28978 cli_runner.go:164] Run: docker network create --driver=bridge --subnet=192.168.49.0/24 --gateway=192.168.49.1 -o --ip-masq -o --icc -o com.docker.network.driver.mtu=1500 --label=created_by.minikube.sigs.k8s.io=true --label=name.minikube.sigs.k8s.io=minikube minikube
+I0211 14:38:26.674359   28978 network_create.go:107] docker network minikube 192.168.49.0/24 created
+I0211 14:38:26.674717   28978 kic.go:117] calculated static IP "192.168.49.2" for the "minikube" container
+I0211 14:38:26.674838   28978 cli_runner.go:164] Run: docker ps -a --format {{.Names}}
+I0211 14:38:26.705580   28978 cli_runner.go:164] Run: docker volume create minikube --label name.minikube.sigs.k8s.io=minikube --label created_by.minikube.sigs.k8s.io=true
+I0211 14:38:26.736002   28978 oci.go:103] Successfully created a docker volume minikube
+I0211 14:38:26.736092   28978 cli_runner.go:164] Run: docker run --rm --name minikube-preload-sidecar --label created_by.minikube.sigs.k8s.io=true --label name.minikube.sigs.k8s.io=minikube --entrypoint /usr/bin/test -v minikube:/var gcr.io/k8s-minikube/kicbase:v0.0.37@sha256:8bf7a0e8a062bc5e2b71d28b35bfa9cc862d9220e234e86176b3785f685d8b15 -d /var/lib
+I0211 14:38:33.557666   28978 cli_runner.go:217] Completed: docker run --rm --name minikube-preload-sidecar --label created_by.minikube.sigs.k8s.io=true --label name.minikube.sigs.k8s.io=minikube --entrypoint /usr/bin/test -v minikube:/var gcr.io/k8s-minikube/kicbase:v0.0.37@sha256:8bf7a0e8a062bc5e2b71d28b35bfa9cc862d9220e234e86176b3785f685d8b15 -d /var/lib: (6.821438506s)
+I0211 14:38:33.557697   28978 oci.go:107] Successfully prepared a docker volume minikube
+I0211 14:38:33.557714   28978 preload.go:132] Checking if preload exists for k8s version v1.26.1 and runtime docker
+I0211 14:38:33.557734   28978 kic.go:190] Starting extracting preloaded images to volume ...
+I0211 14:38:33.557905   28978 cli_runner.go:164] Run: docker run --rm --entrypoint /usr/bin/tar -v /home/ec2-user/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.26.1-docker-overlay2-amd64.tar.lz4:/preloaded.tar:ro -v minikube:/extractDir gcr.io/k8s-minikube/kicbase:v0.0.37@sha256:8bf7a0e8a062bc5e2b71d28b35bfa9cc862d9220e234e86176b3785f685d8b15 -I lz4 -xf /preloaded.tar -C /extractDir
+W0211 14:38:43.330192   28978 cli_runner.go:211] docker run --rm --entrypoint /usr/bin/tar -v /home/ec2-user/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.26.1-docker-overlay2-amd64.tar.lz4:/preloaded.tar:ro -v minikube:/extractDir gcr.io/k8s-minikube/kicbase:v0.0.37@sha256:8bf7a0e8a062bc5e2b71d28b35bfa9cc862d9220e234e86176b3785f685d8b15 -I lz4 -xf /preloaded.tar -C /extractDir returned with exit code 2
+I0211 14:38:43.330209   28978 cli_runner.go:217] Completed: docker run --rm --entrypoint /usr/bin/tar -v /home/ec2-user/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.26.1-docker-overlay2-amd64.tar.lz4:/preloaded.tar:ro -v minikube:/extractDir gcr.io/k8s-minikube/kicbase:v0.0.37@sha256:8bf7a0e8a062bc5e2b71d28b35bfa9cc862d9220e234e86176b3785f685d8b15 -I lz4 -xf /preloaded.tar -C /extractDir: (9.772237753s)
+I0211 14:38:43.334687   28978 client.go:171] LocalClient.Create took 17.008633204s
+I0211 14:38:45.335763   28978 ssh_runner.go:195] Run: sh -c "df -h /var | awk 'NR==2{print $5}'"
+I0211 14:38:45.335823   28978 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+W0211 14:38:45.394825   28978 cli_runner.go:211] docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube returned with exit code 1
+I0211 14:38:45.394952   28978 retry.go:31] will retry after 276.165072ms: new client: new client: Error creating new ssh host from driver: Error getting ssh port for driver: get ssh host-port: get port 22 for "minikube": docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I0211 14:38:45.672260   28978 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+W0211 14:38:45.717601   28978 cli_runner.go:211] docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube returned with exit code 1
+I0211 14:38:45.717713   28978 retry.go:31] will retry after 540.190908ms: new client: new client: Error creating new ssh host from driver: Error getting ssh port for driver: get ssh host-port: get port 22 for "minikube": docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I0211 14:38:46.258475   28978 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+W0211 14:38:46.303468   28978 cli_runner.go:211] docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube returned with exit code 1
+I0211 14:38:46.303578   28978 retry.go:31] will retry after 655.06503ms: new client: new client: Error creating new ssh host from driver: Error getting ssh port for driver: get ssh host-port: get port 22 for "minikube": docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I0211 14:38:46.959752   28978 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+W0211 14:38:46.998245   28978 cli_runner.go:211] docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube returned with exit code 1
+W0211 14:38:46.998346   28978 start.go:275] error running df -h /var: NewSession: new client: new client: Error creating new ssh host from driver: Error getting ssh port for driver: get ssh host-port: get port 22 for "minikube": docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+
+W0211 14:38:46.998365   28978 start.go:242] error getting percentage of /var that is free: NewSession: new client: new client: Error creating new ssh host from driver: Error getting ssh port for driver: get ssh host-port: get port 22 for "minikube": docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I0211 14:38:46.998433   28978 ssh_runner.go:195] Run: sh -c "df -BG /var | awk 'NR==2{print $4}'"
+I0211 14:38:46.998475   28978 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+W0211 14:38:47.048425   28978 cli_runner.go:211] docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube returned with exit code 1
+I0211 14:38:47.048531   28978 retry.go:31] will retry after 231.159374ms: new client: new client: Error creating new ssh host from driver: Error getting ssh port for driver: get ssh host-port: get port 22 for "minikube": docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I0211 14:38:47.280380   28978 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+W0211 14:38:47.323258   28978 cli_runner.go:211] docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube returned with exit code 1
+I0211 14:38:47.323380   28978 retry.go:31] will retry after 445.058653ms: new client: new client: Error creating new ssh host from driver: Error getting ssh port for driver: get ssh host-port: get port 22 for "minikube": docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I0211 14:38:47.769575   28978 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+W0211 14:38:47.802097   28978 cli_runner.go:211] docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube returned with exit code 1
+I0211 14:38:47.802192   28978 retry.go:31] will retry after 318.170823ms: new client: new client: Error creating new ssh host from driver: Error getting ssh port for driver: get ssh host-port: get port 22 for "minikube": docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I0211 14:38:48.121469   28978 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+W0211 14:38:48.159214   28978 cli_runner.go:211] docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube returned with exit code 1
+I0211 14:38:48.159312   28978 retry.go:31] will retry after 553.938121ms: new client: new client: Error creating new ssh host from driver: Error getting ssh port for driver: get ssh host-port: get port 22 for "minikube": docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I0211 14:38:48.713593   28978 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+W0211 14:38:48.749512   28978 cli_runner.go:211] docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube returned with exit code 1
+W0211 14:38:48.749626   28978 start.go:290] error running df -BG /var: NewSession: new client: new client: Error creating new ssh host from driver: Error getting ssh port for driver: get ssh host-port: get port 22 for "minikube": docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+
+W0211 14:38:48.749644   28978 start.go:247] error getting GiB of /var that is available: NewSession: new client: new client: Error creating new ssh host from driver: Error getting ssh port for driver: get ssh host-port: get port 22 for "minikube": docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I0211 14:38:48.749649   28978 start.go:128] duration metric: createHost completed in 22.426306268s
+I0211 14:38:48.749654   28978 start.go:83] releasing machines lock for "minikube", held for 22.426416821s
+W0211 14:38:48.749665   28978 start.go:689] error starting host: creating host: create: creating: insufficient docker storage, no space left on device
+I0211 14:38:48.750296   28978 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W0211 14:38:48.785998   28978 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+I0211 14:38:48.786054   28978 delete.go:82] Unable to get host status for minikube, assuming it has already been deleted: state: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Error: No such container: minikube
+I0211 14:38:48.786066   28978 start.go:699] will skip retrying to create machine because error is not retriable: insufficient docker storage, no space left on device
+I0211 14:38:48.787593   28978 out.go:177] 
+W0211 14:38:48.789005   28978 out.go:239] X Exiting due to RSRC_DOCKER_STORAGE: preload extraction failed: "No space left on device"
+W0211 14:38:48.789154   28978 out.go:239] * Suggestion: 
+
+    Try one or more of the following to free up space on the device:
+    
+    1. Run "docker system prune" to remove unused Docker data (optionally with "-a")
+    2. Increase the storage allocated to Docker for Desktop by clicking on:
+    Docker icon > Preferences > Resources > Disk Image Size
+    3. Run "minikube ssh -- docker system prune" if using the Docker container runtime
+W0211 14:38:48.789243   28978 out.go:239] * Related issue: https://github.com/kubernetes/minikube/issues/9024
+I0211 14:38:48.790611   28978 out.go:177] 
+
+* 
