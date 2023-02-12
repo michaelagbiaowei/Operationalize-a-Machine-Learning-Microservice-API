@@ -1,3 +1,10 @@
+[![Operationalize-a-Machine-Learning-Microservice-API
+](https://circleci.com/gh/Operationalize-a-Machine-Learning-Microservice-API
+/circleci-docs.svg?style=svg)](https://circleci.com/gh/Operationalize-a-Machine-Learning-Microservice-API
+/circleci-docs)
+
+
+
 # Operationalize-a-Machine-Learning-Microservice-API
 
 **Working in progress...**
