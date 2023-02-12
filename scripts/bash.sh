@@ -27,6 +27,3 @@ minikube kubectl -- get pods -A
 sudo chmod u+x run_docker.sh
 
 sudo ./run_docker.sh
-
-# Making predictions
-sudo ./make_prediction.sh
